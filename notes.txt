@@ -1,0 +1,25 @@
+Presentation Structure
+
+* Intro
+* what is CITGM?
+* how does it work?
+* Stories
+  * Broken moment due to new grunt
+    - got agreement to not install grunt-cli globally
+    - https://github.com/TheAlphaNerd/citgm-diaries/blob/master/moment.md
+  * omg broken npm
+   -
+  * Broken Blue bird
+    - https://github.com/TheAlphaNerd/citgm-diaries/blob/master/bluebird.md
+    - TLDR; process.stdout is not always a subclass of tty
+  * 
+  * Wanting to get ember-cli / ember included
+    - I got to remove submodules
+  * node-glob
+    - broken by real-path
+      - https://github.com/TheAlphaNerd/citgm-diaries/blob/master/node-glob.md
+  * upgrading V8
+   - What is an ABI
+   - node-gyp rebuild / npm rebuild
+   - other potential future tests
+  * internal fs changes still breaking vinyl-fs / gulp
