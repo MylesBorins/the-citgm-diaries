@@ -1,0 +1,204 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title The CITGM Diaries
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  style.
+    .hello {
+      background-image: url('images/hello-tharr.gif')
+    }
+    
+    .canary {
+      background-image: url('images/canary.gif')
+    }
+
+    .smoke {
+      background-image: url('images/smoke.jpg')
+    }
+    
+    .complicated {
+      background-image: url('images/complicated.gif')
+    }
+    
+    .confused {
+      background-image: url('images/confused.gif')
+    }
+    
+    .wutang {
+      background-image: url('images/wutang.gif')
+    }
+
+  body
+
+    article
+      section
+        h2 The CITGM Diaries:
+        h3 things break in mysterious and beautiful ways
+        h4 With your host Myles Borins
+        h4
+          a(href='https://twitter.com/thealphanerd') @thealphanerd
+        p  Node Interactive EU 2016
+        
+      section(data-bespoke-backdrop='hello')
+        h1 Hallo
+        
+      section
+        h1 My Name is Myles
+        img.headroom(src='images/me.jpg' alt='itsa me!' width='200px' height='200px')
+      
+      section
+        h3 I currently work at a small disruptive startup called IBM
+        h4 contributing to Node.js
+        
+        img.headroom(src='images/ibm.jpg' alt='Eye Bee M by Paul Rand')
+        
+        h5 The opinions expressed in this talk are solely my own
+      
+      section
+        h1 So what exactly is CITGM?
+      
+      section(data-bespoke-backdrop='canary')
+        h3 The acronym stands for
+        h2 Canary in the Gold Mine
+      
+      section(data-bespoke-backdrop='smoke')
+        h3 It is the Smoke testing utility
+        h4 That we use in the Node.js Project
+        h3 To make sure we don't break your code!
+      
+      section
+        h2 We grab the source code
+        h2 and run unit tests
+        h2 on over 70 of the top modules
+      
+      section
+        h2 This includes
+        h2 core ecosystem modules
+        
+        ul
+          li.hide
+          li request
+          li express
+          li body-parser
+          li level
+          li async
+          li ws
+          li socket.io
+          li serialport
+          li graceful-fs
+          li lodash && underscore
+          li q && bluebird
+      
+      section
+        h2 This includes
+        h2 modules for streams
+        
+        ul
+          li.hide
+          li readable-stream
+          li through2
+          li split2
+          li duplexer2
+          li bl
+          li binary-split
+          li sax
+          li duplexify
+          li pumpify
+          li from2
+      
+      seciton
+        h2 This includes
+        h2 modules for the front end and tooling
+        ul
+          li.hide
+          li browserify
+          li vinyl-fs
+          li gulp
+          li react
+          li jQuery
+          li node-sass
+          li ember-cli
+          li commander
+          li pug
+      
+      section(data-bespoke-backdrop='complicated')
+        h1 How does it work?
+      
+      section(data-bespoke-backdrop='wutang')
+        h1 We do a lot of wrapping
+      
+      section
+        h1 npm view
+      
+      section
+        h1 we wrap that
+      
+      section
+        h1 npm pack
+      
+      section
+        h1 we wrap that
+      
+      section
+        h1 npm install
+        
+      section
+        h1 we wrap that
+      
+      section
+        h1 npm test
+      
+      section
+        h1 we wrap that
+
+      
+      section
+        h1 Insert Punch Line
+
+      section
+        h1 Jade
+      
+      section
+        h2 Jade moved orgs but didn't update their package.json
+        img.headroom(src='images/jade.png' alt='fixing jade' width='50%')
+
+      section
+        h1 Body Parser
+
+      section
+        img(src='images/change-parse.png' width='70%' height='70%')
+      
+      section
+        img(src='images/diff.png' width='70%' height='70%')
+      
+      section
+        img(src='images/infinity.png' width='70%' height='70%')
+      
+      section
+        h2 Before Change
+        pre
+          code.language-javascript.
+            > var parse = require('querystring').parse;
+            > parse('%p=123', undefined, undefined,
+            >  {maxKeys: Infinity}).length;
+            < 1
+      section
+        h2 After Change
+        pre
+          code.language-javascript.
+            > var parse = require('querystring').parse;
+            > parse('%p=123', undefined, undefined,
+            >   {maxKeys: Infinity}).length;
+            < 0
+
+      section
+        h2 Thank You
+        img.headroom(src='images/best-gif-evar.gif' alt='a surfing puppy' width='20%')
+        h3 Myles Borins
+        h4 @thealphanerd
+
+    script(src='build/build.js')
