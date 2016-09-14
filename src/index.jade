@@ -31,6 +31,26 @@ html
     .wutang {
       background-image: url('images/wutang.gif')
     }
+    
+    .pupper {
+      background-image: url('images/pupper.gif')
+    }
+    
+    .kitt {
+      background-image: url('images/kitt.gif')
+    }
+    
+    .pupper-too {
+      background-image: url('images/pupper-too.gif')
+    }
+    
+    .burrito-pupper {
+      background-image: url('images/burrito-pupper.gif')
+    }
+    
+    .recurse {
+      background-image: url('images/recurse.gif')
+    }
 
   body
 
@@ -134,30 +154,30 @@ html
       section
         h1 npm view
       
-      section
+      section(data-bespoke-backdrop='pupper')
         h1 we wrap that
       
       section
         h1 npm pack
       
-      section
+      section(data-bespoke-backdrop='kitt')
         h1 we wrap that
       
       section
         h1 npm install
         
-      section
+      section(data-bespoke-backdrop='pupper-too')
         h1 we wrap that
       
       section
         h1 npm test
       
-      section
+      section(data-bespoke-backdrop='burrito-pupper')
         h1 we wrap that
 
       
-      section
-        h1 Insert Punch Line
+      section(data-bespoke-backdrop='recurse')
+        h1 I'm considering abstracting it
 
       section
         h1 Jade
