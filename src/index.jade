@@ -51,10 +51,24 @@ html
     .recurse {
       background-image: url('images/recurse.gif')
     }
+    
+    .confused-bowie {
+      background-image: url('images/confused-bowie.gif')
+    }
+    .chuck-thumbs-up {
+      background-image: url('images/chuck.gif')
+    }
+    
+    .precog {
+      background-image: url('images/precog.jpg')
+    }
+    
+    .breaking {
+      background-image: utl('breaking.gif')
+    }
 
   body
-
-    article
+    article.minus-one
       section
         h2 The CITGM Diaries:
         h3 things break in mysterious and beautiful ways
@@ -89,33 +103,57 @@ html
         h3 It is the Smoke testing utility
         h4 That we use in the Node.js Project
         h3 To make sure we don't break your code!
+        h4 and that the ecosystem is healthy
       
       section
-        h2 We grab the source code
-        h2 and run unit tests
-        h2 on over 70 of the top modules
+        h2 citgm grabs the source code of a named module
+        h3 runs npm install and npm test
+        h4 it then reports results
+        
+      section
+        h4 it has a logger with various verbosity levels
+        img(src='images/pass.png' alt='it totes passed!' width='60%')
+        img.headroom(src='images/install-verbose.gif' alt='such verbosity!')
       
       section
-        h2 This includes
-        h2 core ecosystem modules
+        h4 Results can be published as:
+        h2 mardown
+        img.headroom(src='images/markdown.png' alt='nice markdown!' width='80%')
+      section
+        h4 Results can be published as:
+        h2 tap
+        img.headroom(src='images/tap.png' alt='tap it in' width='80%')
+      section
+        h4 Results can be published as:
+        h2 xunit
+        img.headroom(src='images/xunit.png' alt='xunit reporter' width='80%')
+
+      section(data-bespoke-backdrop='recurse')
+        h1 citgm-all
+        h2.headroom Currently testing
+        h2 70 modules
+      
+      section
+        h2 This includes:
+        h3 core ecosystem modules
         
         ul
           li.hide
           li request
           li express
           li body-parser
+          li graceful-fs
           li level
           li async
           li ws
           li socket.io
           li serialport
-          li graceful-fs
           li lodash && underscore
           li q && bluebird
       
       section
-        h2 This includes
-        h2 modules for streams
+        h2 This includes:
+        h3 modules for streams
         
         ul
           li.hide
@@ -131,8 +169,8 @@ html
           li from2
       
       seciton
-        h2 This includes
-        h2 modules for the front end and tooling
+        h2 This includes:
+        h3 modules for the front end and tooling
         ul
           li.hide
           li browserify
@@ -145,6 +183,22 @@ html
           li commander
           li pug
       
+      section(data-bespoke-backdrop='confused-bowie')
+        h1 Why would you do something like that
+      
+      section
+        h2 Every test in the Node.js ecosystem
+        h3 Is an integration test for Core
+
+      section(data-bespoke-backdrop='precog')
+        h1 We can find things, before they break
+      
+      section
+        h2 We run citgm in CI
+        h3 It is now mandatory to be passing
+        h4 For all semver-major changes and releases
+        img.headroom(src='images/ci.png' alt='show some images of our CI in jenkins' width='60%')
+
       section(data-bespoke-backdrop='complicated')
         h1 How does it work?
       
@@ -175,9 +229,24 @@ html
       section(data-bespoke-backdrop='burrito-pupper')
         h1 we wrap that
 
+      //- section(data-bespoke-backdrop='recurse')
+      //-   h1 I'm considering abstracting it
+
+      section(data-bespoke-backdrop='confused-bowie')
+        h1 Why would you do something like that
       
-      section(data-bespoke-backdrop='recurse')
-        h1 I'm considering abstracting it
+      section(data-bespoke-backdrop='chuck-thumbs-up')
+        h2 npm already does all this stuff!
+        h3 Every build we do in CI already has it!
+        h4 The npm cli api is not going to change on us
+
+      section(data.bespoke-backdrop="breaking")
+        h1.
+          So how
+          do things break?
+      
+      section
+        h1 Graceful-fs v3.x
 
       section
         h1 Jade
@@ -215,10 +284,17 @@ html
             >   {maxKeys: Infinity}).length;
             < 0
 
+      
+
       section
         h2 Thank You
         img.headroom(src='images/best-gif-evar.gif' alt='a surfing puppy' width='20%')
         h3 Myles Borins
         h4 @thealphanerd
 
+    div#ibm
+      h3 IBM
+
+    div#twits
+      h3 @thealphanerd
     script(src='build/build.js')
