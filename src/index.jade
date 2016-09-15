@@ -64,7 +64,11 @@ html
     }
     
     .breaking {
-      background-image: utl('breaking.gif')
+      background-image: url('images/breaking.gif')
+    }
+    
+    .disgusted-bowie {
+      background-image: url('images/disgusted-bowie.gif')
     }
 
   body
@@ -184,18 +188,18 @@ html
           li pug
       
       section(data-bespoke-backdrop='confused-bowie')
-        h1 Why would you do something like that
+        h1 Why exactly are you doing that?
       
       section
         h2 Every test in the Node.js ecosystem
-        h3 Is an integration test for Core
+        h3 is an integration test for core
 
       section(data-bespoke-backdrop='precog')
-        h1 We can find things, before they break
+        h1 We can find out what is going to break, before it breaks
       
       section
         h2 We run citgm in CI
-        h3 It is now mandatory to be passing
+        h3 it is now mandatory to be passing
         h4 For all semver-major changes and releases
         img.headroom(src='images/ci.png' alt='show some images of our CI in jenkins' width='60%')
 
@@ -232,8 +236,8 @@ html
       //- section(data-bespoke-backdrop='recurse')
       //-   h1 I'm considering abstracting it
 
-      section(data-bespoke-backdrop='confused-bowie')
-        h1 Why would you do something like that
+      section(data-bespoke-backdrop='disgusted-bowie')
+        h1 Why would you use so many child processes?
       
       section(data-bespoke-backdrop='chuck-thumbs-up')
         h2 npm already does all this stuff!
@@ -247,13 +251,12 @@ html
       
       section
         h1 Graceful-fs v3.x
-
-      section
-        h1 Jade
       
       section
-        h2 Jade moved orgs but didn't update their package.json
-        img.headroom(src='images/jade.png' alt='fixing jade' width='50%')
+        h2 A Semver-Major patch
+        h3 Introduced a call to `internal/util`
+        h4 inside of FS
+        
 
       section
         h1 Body Parser
@@ -284,7 +287,8 @@ html
             >   {maxKeys: Infinity}).length;
             < 0
 
-      
+      section
+        h1 Gulp 
 
       section
         h2 Thank You
