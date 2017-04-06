@@ -89,7 +89,7 @@ html
         h2 The CITGM Diaries:
         h3 things break in mysterious and beautiful ways
         h4 With your host @MylesBorins
-        p  Node.js Madrid
+        p  NodeConf Barcelona 2017
         
       section(data-bespoke-backdrop='hello')
         h1 Hola
@@ -105,6 +105,49 @@ html
         img(src='images/gcp.png' alt='Google Clud Platform' style='background-color:white;')
         
         h5.headroom The opinions expressed in this talk are solely my own
+
+      section
+        h1 Dear Diary
+      
+      section(data-bespoke-backdrop='breaking')
+        h1 Today we broke npm
+
+      section
+        h3 It turns an api deprecated in 2010
+        h4 was never actually deprecated
+        img.headroom(src='images/0-fs-read.png' width='70%')
+
+      section
+        h3 So it was decided to deprecate it
+        h4 but only with a warning
+        img(src='images/1-fs-read.png' width='70%')
+      
+      section
+        h3 The change landed
+        img(src='images/2-fs-read.png' width='70%')
+
+      section
+        h3 It broke npm on master
+        img(src='images/3-fs-read.png' width='70%')
+      
+      section
+        h3 Due to the way in which graceful-fs works
+        img(src='images/4-fs-read.png' width='70%')
+      
+      section
+        h3 A short term solution was made to give people time
+        img(src='images/5-fs-read.png' width='70%')
+      
+      section
+        img(src='images/6-fs-read.png' width='70%')
+      
+      section
+        h2 How were we to know
+        h3 that a warning
+        h4 would break the world
+      
+      section
+        h1 CITGM Saved the day!
       
       section
         h1 So what exactly is CITGM?
@@ -123,6 +166,12 @@ html
         h2 citgm grabs the source code of a named module
         h3 runs npm install and npm test
         h4 it then reports results
+      
+      section
+        h1 We run CITGM in CI
+        h2.headroom Building a specific sha of node
+        h3 running the test suite of a specific module
+        h4 and reporting the results
         
       section
         h4 it has a logger with various verbosity levels
@@ -145,7 +194,7 @@ html
       section(data-bespoke-backdrop='recurse')
         h1 citgm-all
         h2.headroom Currently testing
-        h2 70 modules
+        h2 86 modules
       
       section
         h2 This includes:
@@ -182,7 +231,7 @@ html
           li pumpify
           li from2
       
-      seciton
+      section
         h2 This includes:
         h3 modules for the front end and tooling
         ul
@@ -197,6 +246,20 @@ html
           li commander
           li pug
       
+      section
+        h2 This includes:
+        h3 natively compiled modules
+        ul
+          li.hide
+          li serialport
+          li leveldown
+          li bcrypt
+          li node-sass
+          li sqlite3
+          li electron-prebuilt
+          li ffi
+          li node-report
+      
       section(data-bespoke-backdrop='confused-bowie')
         h1 Why exactly are you doing that?
       
@@ -205,12 +268,13 @@ html
         h3 is an integration test for core
 
       section(data-bespoke-backdrop='precog')
-        h1 We can find out what is going to break, before it breaks
+        h2 By running ecosystem tests against a specific version of node
+        h3 We can find out what is going to break, before it breaks
       
       section
-        h2 We run citgm in CI
-        h3 it is now mandatory to be passing
-        h4 For all semver-major changes and releases
+        h2 We run citgm-all in CI
+        h3 for all semver-major changes and release
+        h4 if it doesn't pass the change doesn't land
         img.headroom(src='images/ci.png' alt='show some images of our CI in jenkins' width='60%')
 
       section(data-bespoke-backdrop='complicated')
@@ -253,46 +317,6 @@ html
         h2 npm already does all this stuff!
         h3 Every build we do in CI already has it!
         h4 The npm cli api is not going to change on us
-
-      section
-        h1 Dear Diary
-      
-      section(data-bespoke-backdrop='breaking')
-        h1 Today we broke npm
-
-      section
-        h3 It turns an api deprecated in 2010
-        h4 was never actually deprecated
-        img.headroom(src='images/0-fs-read.png' width='70%')
-
-      section
-        h3 So it was decided to deprecate it
-        h4 but only with a warning
-        img(src='images/1-fs-read.png' width='70%')
-      
-      section
-        h3 The change landed
-        img(src='images/2-fs-read.png' width='70%')
-
-      section
-        h3 It broke npm on master
-        img(src='images/3-fs-read.png' width='70%')
-      
-      section
-        h3 Due to the way in which graceful-fs works
-        img(src='images/4-fs-read.png' width='70%')
-      
-      section
-        h3 A short term solution was made to give people time
-        img(src='images/5-fs-read.png' width='70%')
-      
-      section
-        img(src='images/6-fs-read.png' width='70%')
-      
-      section
-        h2 How were we to know
-        h3 that a warning
-        h4 would break the world
 
       section
         h1 Dear Diary
